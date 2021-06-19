@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace NeuralNetwork
 {
@@ -6,7 +8,10 @@ namespace NeuralNetwork
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<double> Weight = Enumerable.Range(0, 10).Select(w => 1.0).ToList();
+            int i = 0;
+            foreach(var item in Weight)
+            Console.WriteLine(i++ + " - " + item);
         }
     }
 }
