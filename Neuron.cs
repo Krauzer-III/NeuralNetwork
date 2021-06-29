@@ -39,6 +39,15 @@ namespace NeuralNetwork
         /// <returns></returns>
         private double Sigmoid(double x) => 1.0 / (1 + Math.Exp(-x));
 
+        public void SetWeights(params double[] weights)
+        {
+            //TODO: удалть после добавления возможности обучения сети
+            for(int i=0; i< weights.Length; i++)
+            {
+                Weight[i] = weights[i];
+            }
+        }
+
 
         public override string ToString()
         {
